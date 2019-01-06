@@ -24,15 +24,15 @@ after_success:
 
 deploy:
   provider: elasticbeanstalk
-  region: us-east-1
-  app: rexpgredis-1
-  environment: Rexpgredis1-env
-  bucker_name: elasticbeanstalk-us-east-1-748388487233
-  bucker_path: rexpgredis
+  region: "us-east-1"
+  app: "rexpgredis-1"
+  env: "Rexpgredis1-env"
+  bucker_name: "elasticbeanstalk-us-east-1-748388487233"
+  bucker_path: "rexpgredis"
   on:
     branch: master
-  access_key_id: $AWS_ACCESS_KEY
+  access_key_id: "$AWS_ACCESS_KEY"
   secret_access_key:
-    secure: $AWS_SECRET_KEY
+    secure: "$AWS_SECRET_KEY"
 
 
