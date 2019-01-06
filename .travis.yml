@@ -10,17 +10,17 @@ script:
   - docker run ewfnz/client-test yarn test -- --coverage
 
 after_success:
-  - docker build -t ewfnz/react-nginx-client:prod ./client
-  - docker build -t ewfnz/express-worker:prod ./worker
-  - docker build -t ewfnz/express-server:prod ./server
-  - docker build -t ewfnz/nginx-router:prod ./nginx
+  - docker build -t ewfnz/react-nginx-client:latest ./client
+  - docker build -t ewfnz/express-worker:latest ./worker
+  - docker build -t ewfnz/express-server:latest ./server
+  - docker build -t ewfnz/nginx-router:latest ./nginx
 #LogIn to the dockerhub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # Push those builded images to dockerhub
-  - docker push ewfnz/react-nginx-client:prod
-  - docker push ewfnz/express-worker:prod
-  - docker push ewfnz/express-server:prod
-  - docker push ewfnz/nginx-router:prod
+  - docker push ewfnz/react-nginx-client:latest
+  - docker push ewfnz/express-worker:latest
+  - docker push ewfnz/express-server:latest
+  - docker push ewfnz/nginx-router:latest
 
 deploy:
   provider: elasticbeanstalk
