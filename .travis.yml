@@ -27,8 +27,8 @@ deploy:
   region: "us-east-1"
   app: "rexpgredis-1"
   env: "Rexpgredis1-env"
-  bucker_name: "elasticbeanstalk-us-east-1-748388487233"
-  bucker_path: "rexpgredis"
+  bucket_name: "elasticbeanstalk-us-east-1-748388487233"
+  bucket_path: "rexpgredis"
   on:
     branch: master
   access_key_id: "$AWS_ACCESS_KEY"
