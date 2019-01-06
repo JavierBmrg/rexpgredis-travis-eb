@@ -11,7 +11,7 @@ script:
 
 after_success:
   - docker build -t ewfnz/react-nginx-client:prod ./client
-  - docker build -t ewfnz/express-worker:prod ./client
+  - docker build -t ewfnz/express-worker:prod ./worker
   - docker build -t ewfnz/express-server:prod ./server
   - docker build -t ewfnz/nginx-router:prod ./nginx
 #LogIn to the dockerhub
