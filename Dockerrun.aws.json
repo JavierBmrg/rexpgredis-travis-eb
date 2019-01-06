@@ -3,28 +3,28 @@
   "containerDefinitions": [
     {
        "name": "client",
-       "image": "ewfnz/react-nginx-client",
+       "image": "ewfnz/react-nginx-client:prod",
        "memory": 128,
        "hostname": "client",
        "essential": false
     },
     {
        "name": "server",
-       "image": "ewfnz/express-server",
+       "image": "ewfnz/express-server:prod",
        "memory": 128,
        "hostname": "server",
        "essential": false
     },
     {
        "name": "worker",
-       "image": "ewfnz/express-worker",
+       "image": "ewfnz/express-worker:prod",
        "memory": 128,
        "hostname": "worker",
        "essential": false
     },
     {
       "name": "nginx",
-      "image": "ewfnz/express-worker",
+      "image": "ewfnz/express-worker:prod",
       "memory": 128,
       "hostname": "nginx",
       "essential": true,
